@@ -1,251 +1,289 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Jase Scott - Portfolio</title>
-    <link rel="stylesheet" href="./style.css"/>
-    <script src="./script.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
-  <body>
-    <!-- Navigation Bar -->
-    <nav>
-      <div id="home">
-        <div class="profile_name">
-          Jase Scott - FullStack Software Developer
-          <div class="contact_info">
-            <img src="html_finalprojimages/envelope.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
-          jasehudsonscott@icloud.com
-        </div>
-        <div style="clear:both;"></div>
-        <div class="contact_info">
-          <img src="html_finalprojimages/phone.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
-          <a class="linklist" href="https://www.linkedin.com/in/jase-scott-a76980309/">LinkedIn</a>
-          <a class="linklist" href="https://github.com/JScott3234">Github</a>
-          
-          
+<html lang="en">
 
-        </div>
-        </div>
-        <div class="topdiv">
-          <a class="topmenu" href="#about-me">About Me</a>
-          <a class="topmenu" href="#skills">Skills</a>
-          <a class="topmenu" href="#work">Work Experience</a>
-          <a class="topmenu" href="#projects">Projects</a>
-          <a class="topmenu" href="#recommendations">Contact</a>
-        </div>
-      </div>    
-    </nav>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Portfolio</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./site.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
 
-    <!-- About Me -->
-    <section id="about-me" class="container">
-      <div>
-        <img src="custom_images/The_Jase.JPG" class="profile_image"/>
-      </div>
+<body>
+    <header>
+        <!--<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">ScottJaseA1</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>-->
+    </header>
+    <div class="container-fluid">
+        <main role="main" class="pb-3">
 
-      <div>
-          <h1>
-            Jase Scott
-          </h1>
-          <h3 style= color:goldenrod;>
-            Who Am I?
-          </h3>
-          <p>
-            <!--I am a Software Developer that has experience in Unity Development, VR Development, and I am pursuing a Computer Science B.S. at Oklahoma State University. 
-            I take pride in the process of making things, this is something I enjoy and continue to grow with as I pursue various projects and people to work with. -->
+            <div class="banner">
+                <h1>Jase Scott</h1>
+                <div class="contactInfo">
+                    <p>jase.scott@okstate.edu | 405-697-4272 | <a href="https://github.com/JScott3234"
+                            target="_blank">JScott3234/Github.com</a> </p>
+                </div>
+            </div>
 
-            I'm an undergrad at Oklahoma State University that specializes in <b>Full Stack and Virtual Reality Development</b>, currently pursuing a B.S in Computer Science.<br>
-            I take pride in the process of making things, and so programming in all aspects has become something I enjoy and continue to grow with as I pursue various projects and people to work with.
+            <div class="education">
+                <h2>Education</h2>
+                <div class="collegeContainer">
+                    <p>
+                        Oklahoma State University <br />
+                        <strong>Bachelor of Science in Computer Science</strong><br />
+                        Expected 05/2027<br />
+                        Honors College | Freshman Research Scholar<br />
+                        <b>GPA 3.621</b>
+                    </p>
+                </div>
+            </div>
+            <hr />
 
-          </p>
-      </div>
-    </section>
-              
-    <!-- Skills REMAKE THIS INTO A TECH-STACK, would be better to just say what skill rather than-->
-    <section id="skills">
-      <h2>Skills</h2>
-      <div style="clear:both;"></div>
+            <div class="skills">
+                <h2>Tech Stack</h2>
 
-      <section id="IDE's/Dev Tools">
-        <!--VSCode, Git, Github, Unity, Unreal-->
-      </section>
+                <div class="languagesTicker">
+                    <span class="tickerItem">Java</span>
+                    <span class="tickerItem">JavaScript</span>
+                    <span class="tickerItem">C</span>
+                    <span class="tickerItem">C++</span>
+                    <span class="tickerItem">C#</span>
+                    <span class="tickerItem">Python</span>
+                    <span class="tickerItem">HTML5</span>
+                    <span class="tickerItem">CSS</span>
+                    <span class="tickerItem">Rust</span>
+                    <span class="tickerItem">MIPS</span>
+                    <span class="tickerItem">SML</span>
+                    <span class="tickerItem">SQL</span>
+                    <span class="tickerItem">Java</span>
+                    <span class="tickerItem">JavaScript</span>
+                    <span class="tickerItem">C</span>
+                    <span class="tickerItem">C++</span>
+                    <span class="tickerItem">C#</span>
+                    <span class="tickerItem">Python</span>
+                    <span class="tickerItem">HTML5</span>
+                    <span class="tickerItem">CSS</span>
+                    <span class="tickerItem">Rust</span>
+                    <span class="tickerItem">MIPS</span>
+                    <span class="tickerItem">SML</span>
+                    <span class="tickerItem">SQL</span>
+                    <span class="tickerItem">Java</span>
+                    <span class="tickerItem">JavaScript</span>
+                    <span class="tickerItem">C</span>
+                    <span class="tickerItem">C++</span>
+                    <span class="tickerItem">C#</span>
+                    <span class="tickerItem">Python</span>
+                    <span class="tickerItem">HTML5</span>
+                    <span class="tickerItem">CSS</span>
+                    <span class="tickerItem">Rust</span>
+                    <span class="tickerItem">MIPS</span>
+                    <span class="tickerItem">SML</span>
+                    <span class="tickerItem">SQL</span>
+                </div>
+
+                <div class="skillsTicker">
+                    <span class="tickerItem">Project Management</span>
+                    <span class="tickerItem">Communication</span>
+                    <span class="tickerItem">Fast-Learning</span>
+                    <span class="tickerItem">Flexible</span>
+                    <span class="tickerItem">Data Structures</span>
+                    <span class="tickerItem">Algorithms</span>
+                    <span class="tickerItem">Computer Architecture</span>
+                    <span class="tickerItem">Software Development</span>
+                    <span class="tickerItem">Game Development</span>
+                    <span class="tickerItem">Documentation</span>
+                    <span class="tickerItem">Debugging</span>
+                    <span class="tickerItem">Prototyping</span>
+                    <span class="tickerItem">SDLC(AGILE)</span>
+                    <span class="tickerItem">Project Management</span>
+                    <span class="tickerItem">Communication</span>
+                    <span class="tickerItem">Fast-Learning</span>
+                    <span class="tickerItem">Flexible</span>
+                    <span class="tickerItem">Data Structures</span>
+                    <span class="tickerItem">Algorithms</span>
+                    <span class="tickerItem">Computer Architecture</span>
+                    <span class="tickerItem">Software Development</span>
+                    <span class="tickerItem">Game Development</span>
+                    <span class="tickerItem">Documentation</span>
+                    <span class="tickerItem">Debugging</span>
+                    <span class="tickerItem">Prototyping</span>
+                    <span class="tickerItem">SDLC(AGILE)</span>
+
+                </div>
+
+                <div class="toolsTicker">
+                    <span class="tickerItem">VisualStudio</span>
+                    <span class="tickerItem">Git</span>
+                    <span class="tickerItem">Github</span>
+                    <span class="tickerItem">AutoCAD</span>
+                    <span class="tickerItem">Unity</span>
+                    <span class="tickerItem">Unreal Engine</span>
+                    <span class="tickerItem">Godot</span>
+                    <span class="tickerItem">Linux</span>
+                    <span class="tickerItem">Windows</span>
+                    <span class="tickerItem">MacOS</span>
+                    <span class="tickerItem">Arduino</span>
+                    <span class="tickerItem">Blender</span>
+                    <span class="tickerItem">OpenCV</span>
+                    <span class="tickerItem">ROS</span>
+                    <span class="tickerItem">Android</span>
+                    <span class="tickerItem">Virtual Reality</span>
+                    <span class="tickerItem">Augmented Reality</span>
+                    <span class="tickerItem">SQL Server Management Studio</span>
+                    <span class="tickerItem">Matlab</span>
+                    <span class="tickerItem">.NET</span>
+                    <span class="tickerItem">VisualStudio</span>
+                    <span class="tickerItem">Git</span>
+                    <span class="tickerItem">Github</span>
+                    <span class="tickerItem">AutoCAD</span>
+                    <span class="tickerItem">Unity</span>
+                    <span class="tickerItem">Unreal Engine</span>
+                    <span class="tickerItem">Godot</span>
+                    <span class="tickerItem">Linux</span>
+                    <span class="tickerItem">Windows</span>
+                    <span class="tickerItem">MacOS</span>
+                    <span class="tickerItem">Arduino</span>
+                    <span class="tickerItem">Blender</span>
+                    <span class="tickerItem">OpenCV</span>
+                    <span class="tickerItem">ROS</span>
+                    <span class="tickerItem">Android</span>
+                    <span class="tickerItem">Virtual Reality</span>
+                    <span class="tickerItem">Augmented Reality</span>
+                    <span class="tickerItem">SQL Server Management Studio</span>
+                    <span class="tickerItem">Matlab</span>
+                    <span class="tickerItem">.NET</span>
+                </div>
+            </div>
+
+            <div class="work">
+                <h2>Work Experience</h2>
+
+                <div class="workCard">
+                    <h3>IT Helpdesk</h3>
+                    <h4>Oklahoma State University EIT | May 2025 - Present</h4>
+                    <p>Assisting Clients regarding technology issues across all Oklahoma State affiliated Campuses while
+                        developing
+                        soft skills regarding communication and timely problem-solving.</p>
+                </div>
+
+                <div class="workCard">
+                    <h3>Virtual Reality Developer</h3>
+                    <h4>Oklahoma State University | Aug 2024 - March 2025</h4>
+                    <p>Developed an interactive VR experience in Unity for climate simulations of building interiors,
+                        which focused
+                        on enhancing immersion via artificial sensory elements.</p>
+                </div>
+
+                <div class="workCard">
+                    <h3>Land Survey AutoCAD</h3>
+                    <h4>Oklahoma City | May 2024 - Aug 2024</h4>
+                    <p>Worked as part of a team to convert GIS data into property maps using AutoCAD software. Also went
+                        into the
+                        field to collect data.</p>
+                </div>
+            </div>
+
+            <hr />
+
+            <div class="work">
+                <h2>Volunteering and Leadership</h2>
+
+                <div class="workCard">
+                    <h3><a href="https://www.hackokstate.com/">HackOkstate</a></h3>
+                    <h4>Logistics and Catering Director</h4>
+                    <h4>Sept 2025 - Present</h4>
+                    <p>Assisted in the preparation and hosting of an MLH sponsored Hackathon at Oklahoma State, and
+                        contiuning to
+                        assist in preparation for the next!</p>
+                </div>
+
+                <div class="workCard">
+                    <h3><a href="https://okstateacm.github.io/">Associates in Computing Machinery</a></h3>
+                    <h4>Secretary</h4>
+                    <h4>Aug 2025 - Present</h4>
+                    <p>Acting as a networking entity/liason between multiple techonology-oriented
+                        clubs.</p>
+                </div>
+
+                <div class="workCard">
+                    <h3><a href="https://osuvgdc.com/">Video Game Development Club</a></h3>
+                    <h4>Vice President</h4>
+                    <h4>April 2025 - Present</h4>
+                    <p>
+                        Organizing workshops to teach students how to make games,
+                        brainstorming with the other leaders on event ideas,
+                        and networking with other clubs for co-op events.
+                    </p>
+                </div>
+            </div>
+
+            <hr />
+
+            <div class="personal">
+                <h2>Personal Interest - Hiking</h2>
+
+                <div class="personalContainer">
+                    <img src="~/images/hike.png" alt="Mountainview over Denver,CO just before dawn."
+                        class="hikeImage" />
+                    <p class="hiking">
+                        Hiking is one of my favorite pastimes. While it's not something I get to enjoy often, I really
+                        do savor
+                        it.<br />
+                        Whether with friends or on my own, I feel a profound satisfation upon seeing the curvature of
+                        the earth from
+                        the top of a mountain. <br />
+                        It always leaves me with a good story to tell when I get back from my hikes, whether
+                        light-hearted or
+                        perilous. <br />Only occasionally being nearly struck by lightning.<br /><br />
+                    </p>
+                </div>
+            </div>
+
+            <hr />
+
+            <div class="words">
+                <h2 class="word">Compassion</h2>
+                <h2 class="word">Integrity</h2>
+                <h2 class="word">Perseverance</h2>
+            </div>
 
 
-      <section id="langs">
-        <div class="all_skills">
-        <div class="skill">
-          <img src="html_finalprojimages/html5.png"/>
-          <h3>HTML</h3>
-          <p>4 years experience</p>
-        </div>
-        
-        <div class="skill">
-          <img src="html_finalprojimages/CSS3.png"/>
-          <h3>CSS</h3>
-          <p>4 years experience</p>
-        </div>  
-
-        <div class="skill">
-          <img src="html_finalprojimages/js.jpeg"/>
-          <h3>JavaScript</h3>
-          <p>4 years experience</p>
-        </div>  
-
-        <div class="skill">
-          <img src="html_finalprojimages/java.png"/>
-          <h3>Java</h3>
-          <p>3 years experience</p>
-        </div>
-        
-        <div class="skill">
-          <img src="custom_images/cLogo.png"/>
-          <h3>C, C++, C#</h3>
-          <p>2 years experience</p>
-        </div>  
-
-      </section>
-      </div>
-    </section>
-          
-    <!-- Experience -->
-    <section class="work" id="work">
-      <h2>
-        Work Experience
-      </h2>
-      <div style="clear:both;"></div>
-
-        <div id="work-container" class="work-container">
-          <div class="work-card">
-            <h3>IT Support | Oklahoma State University, Enterprise Information Technology  (Tech Infrastructure)</h3>
-            <ul>
-              <li>Handled calls from Clients regarding Information Technology issues for all OSU affiliated campuses</li>
-              <li>Developing soft skills regarding communication and understanding ticket system infrastructure</li>
-              <li>Processing and completing work tickets in a timely fashion</li>
-            </ul>
-          </div>
-          <hr>
-          <div class="work-card">
-            <h3>VR Developer | Oklahoma State University, Department of Interior Design  (Unity, C#)</h3>
-            <ul>
-              <li>Developed an interactive VR experience for a climate simulation pod research project</li>
-              <li>Collaborated with a modeler using Revit to import and integrate 3D models in Unity</li>
-              <li>Focused on enhancing realism and environmental immersion in virtual simulations</li>
-            </ul>
-          </div>
-          <hr>
-          <div class="work-card">
-            <h3>CAD Staff | Golden Land Survey (AutoCAD, Interpersonal Skills)</h3>
-            <ul>
-              <li>Used AutoCAD to map property boundaries and document pipeline networks</li>
-              <li>Coordinated with Oklahoma Dig services for safe excavation planning</li>
-              <li>Assisted in fieldwork to collect data and process geographic surveys</li>
-            </ul>
-          </div>
-          <hr>
-          <div class="work-card">
-            <h3>ESports Technical Staff | Riversport OKC (Interpersonal Skills, IT)</h3>
-            <ul>
-              <li>Maintained Software and Hardware for Riversport's ESports Lounge</li>
-              <li>Handled Customers when they had technical issues</li>
-            </ul>
-          </div>
+        </main>
     </div>
-    </section>
 
-    <!-- Projects  -->
-    <section class="projects" id="projects">
-      <h2>
-        Projects
-      </h2>
-      <div style="clear:both;"></div>
+    <footer class="border-top footer text-muted">
+        <div class="footer">
+            <h3>Jase Scott</h3>
+            <p class="contactInfo">jase.scott@okstate.edu | 405-697-4272 | <a
+                    href="https://github.com/JScott3234">JScott3234/Github.com</a></p>
 
-        <div id="projects-container" class="projects-container">
-          <div class="project-card">
-            <h3>Interactive VR Experience  (Unity, C#)</h3>
-            <ul>
-              <li>Contributed to the development of an Environmental Simulation Pod Research(Funded by OkState's Department of Interior Design) <br>by creating an Interactive Environment for users to navigate.<br>
-                  Used Unity, C#, and involved a lot of learning about VR.</li>
-            </ul>
-          </div>
-          <div class="project-card">
-            <h3>FPS Game (Unity, C#)</h3>
-            <ul>
-              <li>Led a team that developed an FPS dubbed "Bug-Shooter", where the user can shoot large bugs.<br> 
-                  Involved learning a lot about Unity's cloud environment in order to work alongside my teammates.<br>
-                  Our game was submitted to an OSU Game Jam and won first place.</li>
-            </ul>
-          </div>
-          <div class="project-card">
-            <h3>Custom Web Server for Personal Computer (Java)</h3>
-            <ul>
-              <li>Before I was aware of VSCode's live-server software, I made my own executable to test websites. It was mult-threaded even! At some point I may go back to expand its functionality.</li>
-            </ul>
-          </div>
-          <div class="project-card">
-            <h3>This Portfolio Website (HTML, CSS, JavaScript)</h3>
-            <ul>
-              <li>This website is the culmination of my learning about front-end technologies from an IBM certification.</li>
-            </ul>
-          </div>
-    </div>
-    </section>
-
-    
-
-
-    <div style="clear:both;"></div>
-
-    <!-- Contact -->
-    <section id="recommendations">
-      <h2>Contact Me</h2>
-      <div style="clear:both;"></div>
-      <!--<div class="all_recommendations" id="all_recommendations">
-        <div class="recommendation">
-          <span>&#8220;</span>
-          Jase is a very quick learner and quickly grasps important information.
-          He's great not only acting as a team leader, but also in helping others get the job done well.
-          <span>&#8221;</span>
         </div>
-        <div class="recommendation">
-          <span>&#8220;</span>
-          Working with Jase, he tends to be a driving force for the team. Always comes at problems from multiple angles, and even elicits input from others around him.
-          If he's involved on the project, meaningful discussion is bound to be had.
-          <span>&#8221;</span>
-        </div>
-        <div class="recommendation">
-          <span>&#8220;</span>
-          I had had worked alongside Jase as part of the Interior Design Department at OSU, and he seems to have a broad knowledge base about large number of topics.
-          Bouncing ideas off the wall with him seems to provide fruitful development.
-          <span>&#8221;</span>
-        </div>
-      </div> -->
-    </section>
+    </footer>
 
-    <!-- Recommendation Form -->
-    <section id="contact">
-      <div class="flex_center">
-        <fieldset>
-          <legend class="introduction">Send a Message!</legend>          
-          <input id="textbox" type="text" placeholder="Name (Optional)"> <br/>
-          <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
-          <div class="flex_center">
-            <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
-          </div>
-        </fieldset>
-      </div>
-    </section>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
 
-    <div class="iconbutton">
-      <a href="#home">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.45" stroke="goldenrod" width="63px">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      </a>
-    </div>
-
-    <div class="popup" id="popup" class="flex_center">
-      <img src="html_finalprojimages/checkmark--outline.svg"/>
-      <h3>Thanks for sending a message!</h3>
-      <button onclick="showPopup(false)">Ok</button>
-    </div>
-  </body>
 </html>
