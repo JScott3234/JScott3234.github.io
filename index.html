@@ -4,8 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Portfolio</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <title>Portfolio | Jase Scott</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./site.css" asp-append-version="true" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,9 +16,10 @@
 
 <body>
     <header>
-        <!--<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark box-shadow pb-3 pt-2"
+            style="background-color: #162957;">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">ScottJaseA1</a>
+                <a class="navbar-brand" href="index.html" style="color: mintcream;">Home</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -25,42 +27,45 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link" href="projects.html">Project Library</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link" href="education.html">Education</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="leadership.html">Leadership</a>
                         </li>
                     </ul>
                 </div>
             </div>
-        </nav>-->
+        </nav>
     </header>
-    <div class="container-fluid">
-        <main role="main" class="pb-3">
+    <div class="container-fluid p-0">
+        <main role="main" class="pb-0">
 
-            <div class="banner">
+            <div class="row banner justify-content-center">
                 <h1>Jase Scott</h1>
                 <div class="contactInfo">
-                    <p>jase.scott@okstate.edu | 405-697-4272 | <a href="https://github.com/JScott3234"
-                            target="_blank">JScott3234/Github.com</a> </p>
+                    <p>jase.s.5273@gmail.com | <a class="linklist"
+                            href="https://www.linkedin.com/in/jase-scott-a76980309/">LinkedIn</a> | <a
+                            href="https://github.com/JScott3234" target="_blank">JScott3234/Github.com</a> </p>
                 </div>
             </div>
 
-            <div class="education">
-                <h2>Education</h2>
-                <div class="collegeContainer">
-                    <p>
-                        Oklahoma State University <br />
-                        <strong>Bachelor of Science in Computer Science</strong><br />
-                        Expected 05/2027<br />
-                        Honors College | Freshman Research Scholar<br />
-                        <b>GPA 3.621</b>
+            <div class="row personal justify-content-center">
+                <h2>Dedicated to Innovation</h2>
+                <!-- Pay attention to how the box expands when text wraps during screen shrink-->
+                <div class="col-md-8 align-items-center personalContainer">
+                    <img src="./custom_images/The_Jase.JPG" alt="Jase Scott" class="hikeImage" />
+                    <p class="hiking">
+                        Lorem Ipsum
                     </p>
                 </div>
             </div>
+
             <hr />
 
-            <div class="skills">
+            <div class="row skills">
                 <h2>Tech Stack</h2>
 
                 <div class="languagesTicker">
@@ -176,10 +181,10 @@
                 </div>
             </div>
 
-            <div class="work">
+            <div class="row work justify-content-center">
                 <h2>Work Experience</h2>
 
-                <div class="workCard">
+                <div class="col-sm-3 workCard">
                     <h3>IT Helpdesk</h3>
                     <h4>Oklahoma State University EIT | May 2025 - Present</h4>
                     <p>Assisting Clients regarding technology issues across all Oklahoma State affiliated Campuses while
@@ -187,7 +192,7 @@
                         soft skills regarding communication and timely problem-solving.</p>
                 </div>
 
-                <div class="workCard">
+                <div class="col-sm-3 workCard">
                     <h3>Virtual Reality Developer</h3>
                     <h4>Oklahoma State University | Aug 2024 - March 2025</h4>
                     <p>Developed an interactive VR experience in Unity for climate simulations of building interiors,
@@ -195,7 +200,7 @@
                         on enhancing immersion via artificial sensory elements.</p>
                 </div>
 
-                <div class="workCard">
+                <div class="col-sm-3 workCard">
                     <h3>Land Survey AutoCAD</h3>
                     <h4>Oklahoma City | May 2024 - Aug 2024</h4>
                     <p>Worked as part of a team to convert GIS data into property maps using AutoCAD software. Also went
@@ -206,10 +211,10 @@
 
             <hr />
 
-            <div class="work">
+            <div class="row work justify-content-center">
                 <h2>Volunteering and Leadership</h2>
 
-                <div class="workCard">
+                <div class="col-sm-3 workCard">
                     <h3><a href="https://www.hackokstate.com/">HackOkstate</a></h3>
                     <h4>Logistics and Catering Director</h4>
                     <h4>Sept 2025 - Present</h4>
@@ -218,7 +223,7 @@
                         assist in preparation for the next!</p>
                 </div>
 
-                <div class="workCard">
+                <div class="col-sm-3 workCard">
                     <h3><a href="https://okstateacm.github.io/">Associates in Computing Machinery</a></h3>
                     <h4>Secretary</h4>
                     <h4>Aug 2025 - Present</h4>
@@ -226,7 +231,7 @@
                         clubs.</p>
                 </div>
 
-                <div class="workCard">
+                <div class="col-sm-3 workCard">
                     <h3><a href="https://osuvgdc.com/">Video Game Development Club</a></h3>
                     <h4>Vice President</h4>
                     <h4>April 2025 - Present</h4>
@@ -240,50 +245,45 @@
 
             <hr />
 
-            <div class="personal">
-                <h2>Personal Interest - Hiking</h2>
 
-                <div class="personalContainer">
-                    <img src="~/images/hike.png" alt="Mountainview over Denver,CO just before dawn."
-                        class="hikeImage" />
-                    <p class="hiking">
-                        Hiking is one of my favorite pastimes. While it's not something I get to enjoy often, I really
-                        do savor
-                        it.<br />
-                        Whether with friends or on my own, I feel a profound satisfation upon seeing the curvature of
-                        the earth from
-                        the top of a mountain. <br />
-                        It always leaves me with a good story to tell when I get back from my hikes, whether
-                        light-hearted or
-                        perilous. <br />Only occasionally being nearly struck by lightning.<br /><br />
+            <div class="education">
+                <h2>Education</h2>
+                <div class="collegeContainer">
+                    <p>
+                        Oklahoma State University <br />
+                        <strong>Bachelor of Science in Computer Science</strong><br />
+                        Expected 05/2027<br />
+                        Honors College | Freshman Research Scholar<br />
+                        <b>GPA 3.621</b>
                     </p>
                 </div>
             </div>
 
-            <hr />
+            <!--<hr />-->
 
-            <div class="words">
+            <!--<div class="words">
                 <h2 class="word">Compassion</h2>
                 <h2 class="word">Integrity</h2>
                 <h2 class="word">Perseverance</h2>
-            </div>
+            </div>-->
 
 
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="footer">
-            <h3>Jase Scott</h3>
-            <p class="contactInfo">jase.scott@okstate.edu | 405-697-4272 | <a
-                    href="https://github.com/JScott3234">JScott3234/Github.com</a></p>
+    <footer class="footer">
+        <h3 class="text-light">Jase Scott</h3>
+        <p class="contactInfo">jase.scott@okstate.edu | 405-697-4272 | <a
+                href="https://github.com/JScott3234">JScott3234/Github.com</a></p>
 
-        </div>
     </footer>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmxc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="./js/site.js" asp-append-version="true"></script>
 </body>
 
 </html>
