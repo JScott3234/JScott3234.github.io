@@ -28,6 +28,11 @@ h2 {
     color: #203E83;
 }
 
+h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
 /*Banner Section*/
 .banner {
     background-color: #203E83;
@@ -154,6 +159,30 @@ a:hover {
     border-radius: 3px 4px;
     margin-left: 1rem;
     margin-right: 1rem;
+}
+
+/* Buttons */
+
+button {
+    background-color: #203E83;
+    color: mintcream;
+    font-weight: bold;
+    border: 2px solid midnightblue;
+    border-radius: 25px;
+    padding: 1rem;
+    width: 18rem;
+    margin-bottom: 3rem;
+
+}
+
+button:hover {
+    background-color: #305cc2;
+}
+
+.buttonMenu {
+    background-color: #577DD6;
+    border: 3px solid midnightblue;
+    border-radius: 5px;
 }
 
 /*Personal Interest*/
