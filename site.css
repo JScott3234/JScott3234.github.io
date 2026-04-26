@@ -31,6 +31,7 @@ h2 {
 h3 {
     font-size: 1.6rem;
     font-weight: bold;
+    color: #203E83;
 }
 
 /*Banner Section*/
@@ -66,13 +67,19 @@ a:hover {
     text-align: center;
 }
 
-/*Container for Education Attributes*/
+/* College Section*/
 .collegeContainer {
     background-color: #577DD6;
-    width: 35rem;
+    max-width: 35rem;
+    width: 100%;
     border: 3px solid midnightblue;
     border-radius: 5px;
     display: inline-block;
+    padding: 2rem;
+}
+
+.hr {
+    color: #203E83;
 }
 
 /*Skills Section*/
@@ -187,8 +194,6 @@ button:hover {
 
 /*Personal Interest*/
 .personal {
-    text-align: center;
-    vertical-align: central;
     margin: 2rem;
 }
 
@@ -197,22 +202,11 @@ button:hover {
     background-color: #577DD6;
     border: 3px solid midnightblue;
     border-radius: 5px;
-    display: inline-block;
     padding: 2rem;
 }
 
-/* Paragraph Class */
-.hiking {
-    display: inline-block;
-    width: 30rem;
-}
-
-/*Hiking Image*/
-.hikeImage {
-    width: 23rem;
-    height: 100%;
-    display: inline-block;
-    margin-right: 1rem;
+/*Image*/
+.personalImage {
     box-shadow: midnightblue -10px -10px;
 }
 
