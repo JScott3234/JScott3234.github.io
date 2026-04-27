@@ -15,7 +15,7 @@ var p2 = {
     Title: "Competitive Pokemon Team Builder",
     Description: "Web App that uses the Pokemon API to allow users to build Competitive Pokemon Teams and analyze their weaknesses.<br /> Still under development.",
     Link: "https://github.com/JScott3234/PkmnTeamMaker",
-    Image: "",
+    Image: "./custom_images/teamMakerCode.png",
     LinkTitle: "Check the GitHub!"
 };
 
@@ -23,7 +23,7 @@ var p3 = {
     Title: "Ubuntu Linux Home Lab",
     Description: "Repurposed Dell PowerEdge T320 now being used for Personal Drive Storage and Home Lab Projects. Implemented Paper Software for Game Hosting, established Linux Security Protocols for SSH for protected remote access.",
     Link: "",
-    Image: "",
+    Image: "./custom_images/ubuntu-linux.jpg",
     LinkTitle: "Learn to Make Your Own!"
 };
 
@@ -31,7 +31,7 @@ var p4 = {
     Title: "CodeSphere : Web-Based, Collaborative IDE",
     Description: "Web-Hosted coding environment for classes to streamline programming lessons. React.js/Node.js environment incorporating O-Auth systems via Passport.js Microsoft Strategy and Supabase.",
     Link: "https://github.com/ricardoMulino/OSU-Codesphere",
-    Image: "",
+    Image: "./custom_images/TeamCodeSphere.jpg",
     LinkTitle: "Check the GitHub!"
 };
 
@@ -82,7 +82,7 @@ GameDevProjects.push(g4);
 function createProjectCard(project) {
     return `<div class="col-md-3">
     <div class="card">
-        <div class="card-body">
+        <div class="row card-body">
             <img src="${project.Image}" class="card-img-top" alt="${project.Title}">
             <h5 class="card-title">${project.Title}</h5>
             <p class="card-text">${project.Description}</p>
@@ -94,13 +94,9 @@ function createProjectCard(project) {
 
 function displayProjects(projects, className) {
     var projectsRow = document.getElementById(className);
-    if (!projectsRow) return; // Safeguard if element not found
-
+    if (!projectsRow) return;
     projects.forEach(function (project) {
-        // Skip empty objects like the initial [{}]
         if (!project.Title) return;
-
-        // Append the HTML string to the row
         projectsRow.innerHTML += createProjectCard(project);
     });
 }
