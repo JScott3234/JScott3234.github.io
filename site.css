@@ -244,10 +244,18 @@ button:hover {
     padding-top: 3rem;
 }
 
+/*Projects Page*/
+
 #fullStackProjects {
     background-color: #203E83;
 }
 
 #gameDevProjects {
     background-color: #203E83;
+}
+
+.projContainer {
+    background-color: #7C99DF;
+    border: 3px solid midnightblue;
+    border-radius: 5px;
 }
