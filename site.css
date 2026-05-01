@@ -45,6 +45,12 @@ h3 {
     height: 30rem;
 }
 
+.smallBanner {
+    background-color: #203E83;
+    color: mintcream;
+
+}
+
 .contactInfo {
     color: mintcream;
     margin-top: 0;

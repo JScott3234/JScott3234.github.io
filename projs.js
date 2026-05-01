@@ -80,13 +80,13 @@ GameDevProjects.push(g3);
 GameDevProjects.push(g4);
 
 function createProjectCard(project) {
-    return `<div class="col-md-3">
-    <div class="card projContainer">
-        <div class="row card-body">
-            <img src="${project.Image}" class="card-img-top" alt="${project.Title}">
+    return `<div class="col-md-3 mb-4">
+    <div class="card projContainer h-100">
+        <img src="${project.Image}" class="card-img-top" alt="${project.Title}">
+        <div class="card-body d-flex flex-column">
             <h5 class="card-title">${project.Title}</h5>
             <p class="card-text">${project.Description}</p>
-            <a href="${project.Link}" target="_blank" class="btn btn-primary">${project.LinkTitle}</a>
+            <a href="${project.Link}" target="_blank" class="btn btn-primary mt-auto">${project.LinkTitle}</a>
         </div>
     </div>
 </div>`;
