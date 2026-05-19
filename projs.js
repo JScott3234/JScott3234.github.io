@@ -81,7 +81,7 @@ GameDevProjects.push(g4);
 
 function createProjectCard(project) {
     return `<div class="col-md-3 mb-4">
-    <div class="card projContainer h-100">
+    <div class="card projContainer editor-container h-100" data-tab="project.md">
         <img src="${project.Image}" class="card-img-top" alt="${project.Title}">
         <div class="card-body d-flex flex-column">
             <h5 class="card-title">${project.Title}</h5>

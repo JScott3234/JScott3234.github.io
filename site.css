@@ -1,267 +1,260 @@
-html,
-body {
-    background-color: #7C99DF;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: normal;
-    font-style: normal;
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+/* Color Palette - Halcyon Theme */
+:root {
+    --workbench-bg: #171c28;
+    --editor-bg: #1d2433;
+    --border-color: #2f3b54;
+    --text-active: #d7dce2;
+    --text-subtle: #a2aabc;
+    
+    --syntax-cyan: #5ccfe6;
+    --syntax-purple: #c3a6ff;
+    --syntax-yellow: #ffd580;
+    --syntax-green: #bae67e;
+    --syntax-orange: #ffae57;
 }
 
-.montserrat {
-    /*-<uniqueifier >*/
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: normal;
-    font-style: normal;
+html, body {
+    background-color: var(--workbench-bg);
+    color: var(--text-subtle);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px; 
+    padding-bottom: 2.5rem; /* Space for the status bar footer */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
 }
 
 h1 {
-    font-size: 8rem;
-    color: #3AB1CF;
-    font-weight: bold;
-    padding-top: 5.5rem;
+    font-size: 4rem;
+    color: var(--syntax-cyan);
+    padding-top: 3rem;
     margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
 }
 
 h2 {
-    font-size: 1.5rem;
-    color: #203E83;
+    font-size: 1.8rem;
+    color: var(--syntax-purple);
+    margin-bottom: 1.5rem;
 }
 
 h3 {
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: #203E83;
+    font-size: 1.3rem;
+    color: var(--syntax-yellow);
 }
 
-/*Banner Section*/
-.banner {
-    background-color: #203E83;
-    color: mintcream;
-    text-align: center;
-    margin: 0;
-    padding: 2rem;
-    width: 100%;
-    height: 30rem;
-}
-
-.smallBanner {
-    background-color: #203E83;
-    color: mintcream;
-
-}
-
-.contactInfo {
-    color: mintcream;
-    margin-top: 0;
+p {
+    color: var(--text-active);
+    line-height: 1.6;
 }
 
 a {
-    color: mintcream;
+    color: var(--syntax-orange);
     text-decoration: none;
+    transition: color 0.2s;
 }
 
 a:hover {
-    color: #3AB1CF;
+    color: var(--syntax-yellow);
+    text-decoration: underline;
 }
 
-/*Education Section*/
-.education {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    margin-top: 2rem;
+/* Navbar (Workbench Top) */
+.navbar {
+    background-color: var(--workbench-bg) !important;
+    border-bottom: 1px solid var(--border-color);
+}
+.navbar-brand, .nav-link {
+    color: var(--text-active) !important;
+}
+.nav-link:hover {
+    color: var(--syntax-cyan) !important;
+}
+
+/* Editor Container (IDE Tab Window) */
+.editor-container {
+    background-color: var(--editor-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    position: relative;
+    padding: 3.5rem 2rem 2rem 2rem; /* Extra top padding for the tab bar */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    margin-bottom: 2rem;
+}
+
+.editor-container::before {
+    content: attr(data-tab);
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    right: 0;
+    height: 35px;
+    background-color: var(--workbench-bg);
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    color: var(--text-subtle);
+    font-size: 0.85rem;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Specific Section Tweaks */
+.banner {
     text-align: center;
+    padding: 2rem 1rem;
+}
+.contactInfo {
+    color: var(--text-subtle);
+    margin-bottom: 2rem;
+}
+.contactInfo a {
+    color: var(--syntax-cyan);
 }
 
-/* College Section*/
-.collegeContainer {
-    background-color: #577DD6;
-    max-width: 35rem;
-    width: 100%;
-    border: 3px solid midnightblue;
-    border-radius: 5px;
-    display: inline-block;
-    padding: 2rem;
+.personalImage {
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    max-width: 100%;
+    height: auto;
 }
 
-.hr {
-    color: #203E83;
+/* Work Experience */
+.workCard {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.workCard h4 {
+    color: var(--text-subtle);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+.workCard h5 {
+    color: var(--syntax-green);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
 }
 
-/*Skills Section*/
+/* Buttons (Terminal Commands) */
+button, .btn-dark, .btn-primary {
+    background-color: var(--border-color);
+    color: var(--text-active);
+    font-family: 'JetBrains Mono', monospace;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+button:hover, .btn-dark:hover, .btn-primary:hover {
+    background-color: var(--syntax-cyan);
+    color: #1d2433;
+    border-color: var(--syntax-cyan);
+}
+
+/* Tickers */
 .skills {
     width: 100%;
     overflow: hidden;
-    /* Hides the content outside the view so it can roll in*/
-    color: black;
-    padding: 0.5rem 0;
-    text-align: center;
+    padding: 2rem 0;
 }
-
-/* Individual Tickers for Each Part of The Skills Section, 
-    used to apply unique animations to each Ticker*/
-.languagesTicker {
+.languagesTicker, .skillsTicker, .toolsTicker {
     display: flex;
-    animation: ticker 45s linear infinite;
     white-space: nowrap;
+    margin-bottom: 1rem;
 }
+.languagesTicker { animation: ticker 45s linear infinite; }
+.skillsTicker { animation: ticker2 45s linear infinite; }
+.toolsTicker { animation: ticker 45s linear infinite; }
 
-.skillsTicker {
-    display: flex;
-    animation: ticker2 45s linear infinite;
-    white-space: nowrap;
-}
-
-.toolsTicker {
-    display: flex;
-    animation: ticker 45s linear infinite;
-    white-space: nowrap;
-}
-
-/*Applied to Each Block in the Ticker*/
 .tickerItem {
     display: inline-block;
-    margin: 0.5 2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-    border: 2px solid midnightblue;
-    background: #577DD6;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1.2rem;
+    background: var(--editor-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--syntax-green);
+    font-size: 0.9rem;
 }
 
-/*Dedicated Animations for Tickers*/
-
-/*Right to Left Ticker Animation*/
 @keyframes ticker {
-    0% {
-        transform: translate3d(0, 0, 0);
-    }
-
-    100% {
-        transform: translate3d(-100%, 0, 0);
-    }
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
 }
-
-/*Left to Right Ticker Animation*/
 @keyframes ticker2 {
-    0% {
-        transform: translate3d(-100%, 0, 0);
-    }
-
-    100% {
-        transform: translate3d(0, 0, 0);
-    }
+    0% { transform: translate3d(-100%, 0, 0); }
+    100% { transform: translate3d(0, 0, 0); }
 }
 
-/* Work Experience & Volunteering/Leadership */
-.work {
-    text-align: center;
-    margin: 0rem;
-    margin-bottom: 3rem;
-}
-
-/* Each Job Element, also used for Volunteer Section */
-.workCard {
-    background-color: #203E83;
-    border: 3px solid #577DD6;
-    color: white;
-    display: inline-block;
-    vertical-align: top;
-    padding: 1rem;
-    border-radius: 3px 4px;
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
-
-/* Buttons */
-
-button {
-    background-color: #203E83;
-    color: mintcream;
-    font-weight: bold;
-    border: 2px solid midnightblue;
-    border-radius: 25px;
-    padding: 1rem;
-    width: 18rem;
-    margin-bottom: 3rem;
-
-}
-
-button:hover {
-    background-color: #305cc2;
-}
-
-.buttonMenu {
-    background-color: #577DD6;
-    border: 3px solid midnightblue;
-    border-radius: 5px;
-}
-
-/*Personal Interest*/
-.personal {
-    margin: 2rem;
-}
-
-/*Container for Image and Paragraph*/
-.personalContainer {
-    background-color: #577DD6;
-    border: 3px solid midnightblue;
-    border-radius: 5px;
-    padding: 2rem;
-}
-
-/*Image*/
-.personalImage {
-    box-shadow: midnightblue -10px -10px;
-}
-
-/*Three Words Section*/
-.words {
-    height: 10rem;
-    padding-bottom: 2rem;
-    margin-bottom: 3rem;
-    text-align: center;
-}
-
-/*Individual Word*/
-.word {
-    border: 4px solid midnightblue;
-    width: 22rem;
-    height: 4rem;
-    text-align: center;
-    display: inline-block;
-    margin-right: 5rem;
-    font-size: 3rem;
-    border-radius: 25px 25px;
-    color: #6082B6;
-    text-shadow: 2px 1px 1px mintcream;
-    background-color: midnightblue;
-}
-
-/*Footer*/
-.footer {
-    text-align: center;
-    background-color: #162957;
-    width: 100%;
-    height: 15rem;
-    margin: 0;
-    padding: 2rem;
-    padding-top: 3rem;
-}
-
-/*Projects Page*/
-
-#fullStackProjects {
-    background-color: #203E83;
-}
-
-#gameDevProjects {
-    background-color: #203E83;
-}
-
+/* Projects Page Elements */
 .projContainer {
-    background-color: #7C99DF;
-    border: 3px solid midnightblue;
-    border-radius: 5px;
+    background-color: var(--editor-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.projContainer:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    border-color: var(--syntax-cyan);
+}
+
+.projContainer .card-body {
+    padding: 1.5rem;
+    background-color: var(--editor-bg);
+}
+.projContainer .card-title {
+    color: var(--syntax-cyan);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.projContainer .card-text {
+    color: var(--text-active);
+    font-size: 0.9rem;
+}
+
+/* Footer (Status Bar) */
+.footer {
+    background-color: var(--syntax-purple);
+    color: #171c28;
+    text-align: center;
+    padding: 0.4rem;
+    font-size: 0.85rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer h3 {
+    font-size: 0.85rem;
+    margin: 0 0 0 1rem;
+    color: #171c28;
+}
+.footer .contactInfo {
+    margin: 0 1rem 0 0;
+}
+.footer p, .footer a {
+    color: #171c28;
+    margin: 0;
+}
+.footer a:hover {
+    color: #fff;
+    text-decoration: none;
 }
