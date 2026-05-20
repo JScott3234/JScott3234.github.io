@@ -16,7 +16,35 @@
 </head>
 
 <body>
-    <header id="header"></header>
+    <!-- Injecting Header for others, leaving this one hard-coded so it renders fast -->
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark box-shadow pb-3 pt-2"
+            style="background-color: #162957;">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html" style="color: mintcream;">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/projects.html">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/education.html">Education</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/leadership.html">Leadership</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/research.html">Research</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
     <div class="container-fluid p-0 overflow-x-hidden">
         <main role="main" class="pb-0">
 
@@ -58,7 +86,7 @@
                 </div>
             </div>
 
-            <!-- Skills -->
+            <!-- Skills I want to DOM Pop it, but I also don't know how taxing it would be on the load time-->
             <div class="row skills">
 
                 <div class="languagesTicker">
@@ -263,7 +291,7 @@
         </main>
     </div>
 
-    <footer id="footer"></footer>
+    <!--<footer id="footer"></footer>-->
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>

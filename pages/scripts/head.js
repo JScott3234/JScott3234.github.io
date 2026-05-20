@@ -26,7 +26,8 @@ var header = `<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-da
             </div>
         </nav>`;
 
-document.getElementById("header").innerHTML = header;
+const head = document.querySelector('#header');
+head.insertAdjacentHTML('afterbegin', header);
 
 // Inject Footer
 var footer = `<footer class="footer">
