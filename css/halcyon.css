@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+
+:root {
+    /* Halcyon Color Palette */
+    --bg: #171c28;
+    --card: #1d2433;
+    --border: #2f3b54;
+    --mainText: #d7dce2;
+    --secondaryText: #a2aabc;
+    --cyan: #5ccfe6;
+    --purple: #c3a6ff;
+    --yellow: #ffd580;
+    --green: #bae67e;
+    --orange: #ffae57;
+}
+
+html,
+body {
+    background-color: var(--bg);
+    color: var(--secondaryText);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+    padding-bottom: 2.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 4rem;
+    color: var(--yellow);
+    padding-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: var(--purple);
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: var(--yellow);
+}
+
+p {
+    color: var(--mainText);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--orange);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--yellow);
+    text-decoration: underline;
+}
+
+/* Navbar (Workbench Top) */
+.navbar {
+    background-color: var(--bg) !important;
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar-brand,
+.nav-link {
+    color: var(--mainText) !important;
+}
+
+.nav-link:hover {
+    color: var(--orange) !important;
+}
+
+/* Editor Container - looks like a tab window */
+.editor-container {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    position: relative;
+    padding: 3.5rem 2rem 2rem 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+}
+
+.editor-container::before {
+    content: attr(data-tab);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 35px;
+    background-color: var(--bg);
+    border-bottom: 1px solid var(--border);
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    color: var(--secondaryText);
+    font-size: 0.85rem;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Index Page */
+.banner {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.contactInfo {
+    color: var(--secondaryText);
+    margin-bottom: 2rem;
+}
+
+.contactInfo a {
+    color: var(--cyan);
+}
+
+.personalImage {
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    max-width: 100%;
+    height: auto;
+}
+
+/* Work Experience */
+.workCard {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.workCard h4 {
+    color: var(--secondaryText);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.workCard h5 {
+    color: var(--green);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Buttons (Terminal Commands??) */
+button,
+.btn-dark,
+.btn-primary {
+    background-color: var(--border);
+    color: var(--mainText);
+    font-family: 'JetBrains Mono', monospace;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+button:hover,
+.btn-dark:hover,
+.btn-primary:hover {
+    background-color: var(--orange);
+    color: #1d2433;
+    border: var(--cyan);
+}
+
+/* Tickers */
+.skills {
+    width: 100%;
+    overflow: hidden;
+    padding: 2rem 0;
+}
+
+.languagesTicker,
+.skillsTicker,
+.toolsTicker {
+    display: flex;
+    white-space: nowrap;
+    margin-bottom: 0.5rem;
+}
+
+.languagesTicker {
+    animation: ticker 45s linear infinite;
+}
+
+.skillsTicker {
+    animation: ticker2 45s linear infinite;
+}
+
+.toolsTicker {
+    animation: ticker 45s linear infinite;
+}
+
+.tickerItem {
+    display: inline-block;
+    margin: 0 0.15rem;
+    padding: 0.5rem 1.2rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--green);
+    font-size: 0.9rem;
+}
+
+@keyframes ticker {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+@keyframes ticker2 {
+    0% {
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Projects Page Elements (borders disappear upon hover)*/
+.projContainer {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.projContainer:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    border: var(--purple);
+}
+
+.projContainer .card-body {
+    padding: 1.5rem;
+    background-color: var(--card);
+}
+
+.projContainer .card-title {
+    color: var(--cyan);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.projContainer .card-text {
+    color: var(--mainText);
+    font-size: 0.9rem;
+}
+
+/* Footer - looks like a status bar */
+.footer {
+    background-color: var(--yellow);
+    color: #171c28;
+    text-align: center;
+    padding: 0.4rem;
+    font-size: 0.85rem;
+    position: fixed;
+    /*Figure out how to fix this only when the bottom of page comes into view*/
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer h3 {
+    font-size: 0.85rem;
+    margin: 0 0 0 1rem;
+    color: #171c28;
+}
+
+.footer .contactInfo {
+    margin: 0 1rem 0 0;
+}
+
+.footer p,
+.footer a {
+    color: #171c28;
+    margin: 0;
+}
+
+.footer a:hover {
+    color: #fff;
+    text-decoration: none;
+}
