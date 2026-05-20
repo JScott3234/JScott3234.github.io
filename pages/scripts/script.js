@@ -1,3 +1,5 @@
+// Really old artifact from when I started on this project, was like a coursera assignment for web dev, gotta finish that sometime.
+// Taught me a bit about DOM manipulation, event handling, and page population
 function addRecommendation() {
   // Get the message of the new recommendation
   let recommendation = document.getElementById("new_recommendation");

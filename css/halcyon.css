@@ -304,6 +304,6 @@ button:hover,
 }
 
 .footer a:hover {
-    color: #fff;
+    color: var(--purple);
     text-decoration: none;
 }

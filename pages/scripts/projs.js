@@ -3,6 +3,7 @@ var GameDevProjects = [{}];
 
 // Fullstack and Network Projects
 
+// I want to move these to .json files
 var p1 = {
     Title: "FlowState : AI Enhanced Scheduling App",
     Description: "Hacklahoma Award Winning Calendar Application that integrates a RAG system to provide time and cost estimates for tasks.",
@@ -101,6 +102,5 @@ function displayProjects(projects, className) {
     });
 }
 
-// Display projects for each section
 displayProjects(FullStackProjects, "fullStackProjects");
 displayProjects(GameDevProjects, "gameDevProjects");
