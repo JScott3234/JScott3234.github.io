@@ -88,7 +88,7 @@ a:hover {
     color: var(--orange) !important;
 }
 
-/* Editor Container - looks like a tab window */
+/* Editor Container - made to look like a tab window */
 .editor-container {
     background-color: var(--card);
     border: 1px solid var(--border);
@@ -158,7 +158,7 @@ a:hover {
     margin-bottom: 1.5rem;
 }
 
-/* Buttons (Terminal Commands??) */
+/* Buttons */
 button,
 .btn-dark,
 .btn-primary {
@@ -168,7 +168,7 @@ button,
     border: 1px solid var(--border);
     border-radius: 4px;
     padding: 0.75rem 1.5rem;
-    transition: all 0.2s;
+    /*transition: all 0.2s;*/
     cursor: pointer;
 }
 
@@ -177,10 +177,10 @@ button:hover,
 .btn-primary:hover {
     background-color: var(--orange);
     color: #1d2433;
-    border: var(--cyan);
+    border: var(--orange);
 }
 
-/* Tickers */
+/* Marquees (feels weird to call them tickers) */
 .skills {
     width: 100%;
     overflow: hidden;
@@ -238,7 +238,7 @@ button:hover,
     }
 }
 
-/* Projects Page Elements (borders disappear upon hover)*/
+/* Projects Page Elements */
 .projContainer {
     background-color: var(--card);
     border: 1px solid var(--border);
@@ -249,8 +249,8 @@ button:hover,
 
 .projContainer:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-    border: var(--purple);
+    box-shadow: 0 8px 25px #056d30;
+    /*border: var(--purple);*/
 }
 
 .projContainer .card-body {
@@ -269,7 +269,7 @@ button:hover,
     font-size: 0.9rem;
 }
 
-/* Footer - looks like a status bar */
+/* Footer */
 .footer {
     background-color: var(--yellow);
     color: #171c28;
