@@ -2,7 +2,7 @@
 
 
 :root {
-    /* Halcyon Color Palette */
+    /* Halcyon Color Palette - thank you Brittany Chiang */
     --bg: #171c28;
     --card: #1d2433;
     --border: #2f3b54;
@@ -13,6 +13,14 @@
     --yellow: #ffd580;
     --green: #bae67e;
     --orange: #ffae57;
+
+    /* Accents */
+    --red: #ef4444;
+    --lightRed: #fca5a5;
+    --lightBlue: #60a5fa;
+    --darkBlue: #3b82f6;
+    --lightOrange: #fdba74;
+    --darkOrange: #fb923c;
 }
 
 html,
@@ -269,6 +277,10 @@ button:hover,
     font-size: 0.9rem;
 }
 
+.orange{
+    color: var(--orange);
+}
+
 /* Footer */
 .footer {
     background-color: var(--yellow);
@@ -306,4 +318,120 @@ button:hover,
 .footer a:hover {
     color: var(--purple);
     text-decoration: none;
+}
+
+/* Leadership Custom Sections */
+.thunderContainer {
+    border: 1px solid var(--darkBlue) !important;
+    box-shadow: 0 4px 20px rgba(79, 68, 239, 0.15) !important;
+    /* Mimicking the club site's bkgd pattern*/
+    background-image: url("../images/arena.jpg");
+    background-size: fit-content;
+}
+
+.thunderContainer::before {
+    border-bottom: 1px solid var(--darkBlue) !important;
+    color: var(--darkBlue) !important;
+}
+
+.thunderTitle a {
+    color: var(--darkBlue) !important;
+}
+
+.thunderBody {
+    background-color: var(--card);
+    border: 3px solid var(--darkOrange);
+    border-radius: 6px;
+}
+
+.thunderAccent {
+    color: var(--darkBlue) !important;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.vgdcContainer {
+    border: 1px solid var(--red) !important;
+    box-shadow: 0 4px 20px rgba(239, 68, 68, 0.15) !important;
+    /* Mimicking the club site's bkgd pattern*/
+    background-image: radial-gradient(var(--border) 2px, transparent 2px);
+    background-size: 5px 5px;
+}
+
+.vgdcContainer::before {
+    border-bottom: 1px solid var(--red) !important;
+    color: var(--red) !important;
+}
+
+.vgdcTitle a {
+    color: var(--red) !important;
+}
+
+.vgdcBody {
+    background-color: var(--card);
+    border: 3px solid var(--red);
+    border-radius: 6px;
+}
+
+.vgdcAccent {
+    color: var(--lightRed) !important;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.hackokContainer {
+    border: 1px solid var(--orange) !important;
+    box-shadow: 0 4px 20px rgba(249, 115, 22, 0.15) !important;
+    background-image: url("../images/pcb.jpg");
+    background-size: cover;
+    background-color: gray;
+}
+
+.hackokContainer::before {
+    border-bottom: 1px solid var(--orange) !important;
+    color: var(--orange) !important;
+}
+
+.hackokTitle a {
+    color: var(--lightOrange) !important;
+}
+
+.hackokBody {
+    background-color: var(--card);
+    border: 3px solid var(--darkOrange);
+    border-radius: 6px;
+}
+
+.hackokAccent {
+    color: var(--darkOrange) !important;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.acmContainer {
+    border: 1px solid var(--darkBlue) !important;
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.15) !important;
+    background-image: url("../images/ide.png");
+    background-size: cover;
+}
+
+.acmContainer::before {
+    border-bottom: 1px solid var(--darkBlue) !important;
+    color: var(--darkBlue) !important;
+}
+
+.acmTitle a {
+    color: var(--lightBlue) !important;
+}
+
+.acmBody {
+    background-color: var(--card);
+    border: 3px solid var(--lightBlue);
+    border-radius: 6px;
+}
+
+.acmAccent {
+    color: var(--lightBlue) !important;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
 }
