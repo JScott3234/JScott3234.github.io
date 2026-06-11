@@ -18,28 +18,21 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark box-shadow pb-3 pt-2"
-            style="background-color: #162957;">
+        <nav class="navbar navbar-expand-sm navbar-dark box-shadow pb-3 pt-2" style="background-color: #162957;">
             <div class="container">
                 <a class="navbar-brand" href="../index.html" style="color: mintcream;">Home</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+            
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/projects.html">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/leadership.html">Leadership</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/education.html">Education</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/research.html">Research</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/leadership.html">Leadership</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/education.html">Education</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/research.html">Research</a></li>
                     </ul>
                 </div>
             </div>
@@ -55,12 +48,12 @@
                 </div>
             </div>
 
-            <div class="row pt-3 mb-3">
+            <div class="container-fluid pt-3 mb-3">
                 <h2 class="text-center text-light pb-1"><strong>FullStack Development and Networking</strong></h2>
                 <div id="fullStackProjects" class="row justify-content-center align-items-stretch p-4"></div>
             </div>
 
-            <div class="row pt-3 mb-3">
+            <div class="container-fluid pt-3 mb-3">
                 <h2 class="text-center text-light pb-1"><strong>Game Development and Virtual Reality</strong></h2>
                 <div id="gameDevProjects" class="row justify-content-center align-items-stretch p-4"></div>
             </div>
@@ -86,5 +79,7 @@
         </main>
     </div>
     <footer id="footer"></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

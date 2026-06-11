@@ -96,6 +96,16 @@ a:hover {
     color: var(--orange) !important;
 }
 
+/* Mobile dropdown panel */
+@media (max-width: 575px) {
+    .navbar-collapse {
+        background-color: var(--card);
+        border-top: 1px solid var(--border);
+        padding: 0.5rem 1rem;
+        border-radius: 0 0 6px 6px;
+    }
+}
+
 /* Editor Container - made to look like a tab window */
 .editor-container {
     background-color: var(--card);
@@ -493,6 +503,14 @@ button:hover,
 
 .timelineContainer:nth-child(4){
     animation-delay: 3s;
+}
+
+.timelineContainer:nth-child(5){
+    animation-delay: 4s;
+}
+
+.timelineContainer:nth-child(6){
+    animation-delay: 5s;
 }
 
 .left{
