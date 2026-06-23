@@ -91,13 +91,24 @@ var g4 = {
     md: "renderer"
 };
 
+var g5 = {
+    Title: "3D Graphics Renderer",
+    subText: "Java Graphics Renderer",
+    Description: "Object-oriented shape rendering system.",
+    Link: "https://github.com/JScott3234/3D-Renderer",
+    Image: "../images/tetraRender.png",
+    LinkTitle: "Check My GitHub!",
+    md: "renderer"
+};
+
 GameDevProjects.push(g1);
 GameDevProjects.push(g2);
 GameDevProjects.push(g3);
 GameDevProjects.push(g4);
+GameDevProjects.push(g5);
 
 function createProjectCard(project) {
-    return `<div class="col-md-3 mb-4">
+    return `<div class="proj-card-wrapper">
     <div class="card projContainer editor-container h-100" data-tab="${project.md}.md">
         <img src="${project.Image}" class="card-img-top" alt="${project.Title}">
         <div class="card-body d-flex flex-column">
@@ -110,14 +121,22 @@ function createProjectCard(project) {
 </div>`;
 }
 
-function displayProjects(projects, className) {
-    var projectsRow = document.getElementById(className);
-    if (!projectsRow) return;
-    projects.forEach(function (project) {
-        if (!project.Title) return;
-        projectsRow.innerHTML += createProjectCard(project);
+/**
+ * Populates a carousel track with project cards.
+ * @param {Array}  projects   - Project data array
+ * @param {string} trackId    - id of the .proj-carousel-track element
+ */
+function buildCarousel(projects, trackId) {
+    const track = document.getElementById(trackId);
+    if (!track) return;
+
+    const validProjects = projects.filter(p => p.Title);
+
+    // Populate track directly with cards (no extra page elements)
+    validProjects.forEach(p => {
+        track.innerHTML += createProjectCard(p);
     });
 }
 
-displayProjects(FullStackProjects, "fullStackProjects");
-displayProjects(GameDevProjects, "gameDevProjects");
+buildCarousel(FullStackProjects, 'fullStackProjects');
+buildCarousel(GameDevProjects, 'gameDevProjects');

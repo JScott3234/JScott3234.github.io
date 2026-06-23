@@ -9,7 +9,6 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/halcyon.css" asp-append-version="true" />
     <script type="module" src="../pages/scripts/head.js"></script>
-    <script type="module" src="../pages/scripts/projs.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -44,18 +43,135 @@
             <div class="row justify-content-center mb-5">
                 <div class="col-sm-12 text-center">
                     <h1>Project Library</h1>
-                    <p style="color: var(--purple);">A bunch of stuff I've worked on, check it out!</p>
+                    <p style="color: var(--purple);">Feel free to explore my collection of projects!</p>
                 </div>
             </div>
 
             <div class="container-fluid pt-3 mb-3">
-                <h2 class="text-center text-light pb-1"><strong>FullStack Development and Networking</strong></h2>
-                <div id="fullStackProjects" class="row justify-content-center align-items-stretch p-4"></div>
+                <h2 class="text-center text-light pb-1"><strong>FullStack Development and Network Science</strong></h2>
+                <div class="proj-carousel" id="fullStackCarousel">
+                    <div class="proj-carousel-track" id="fullStackProjects">
+                        <div class="proj-card-wrapper">
+                            <div class="card projContainer editor-container h-100" data-tab="neurosci.md">
+                                <img src="../images/symbolRecog.png" class="card-img-top" alt="Drawing and Recognition Spike Plot">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Symbol Recognition Neural Model</h5>
+                                    <p class="card-subtitle mb-2 orange">Izhikevich Neural Network</p>
+                                    <p class="card-text">A neural network model that is able to recognize and classify symbols based on drawings. A play-model that can be hand-trained for specific symbol sets.</p>
+                                    <a href="https://docs.google.com/document/d/1vPiJ3LGC5OhegdGSLsNea530lUCqOHK7nZwcEeITzN0/edit?usp=sharing" target="_blank" class="btn btn-primary mt-auto">My Paper About It</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proj-card-wrapper">
+                            <div class="card projContainer editor-container h-100" data-tab="flowstate.md">
+                                <img src="../images/flowstate.png" class="card-img-top" alt="FlowState">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">FlowState</h5>
+                                    <p class="card-subtitle mb-2 orange">AI-Enhanced Scheduling App</p>
+                                    <p class="card-text">Hacklahoma Award Winning Calendar Application that integrates a RAG system to provide time and cost estimates for tasks.</p>
+                                    <a href="https://devpost.com/software/flowstate-ksg7d2" target="_blank" class="btn btn-primary mt-auto">Check Our DevPost!</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proj-card-wrapper">
+                            <div class="card projContainer editor-container h-100" data-tab="teammaker.md">
+                                <img src="../images/teamMakerCode.png" class="card-img-top" alt="Pokemon Team Maker">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Pokemon Team Maker</h5>
+                                    <p class="card-subtitle mb-2 orange">React.js Web App using the Pokemon API</p>
+                                    <p class="card-text">Analytics-Focused Web App for users to optimize their Pokemon's Stats and build Competitive Pokemon Teams.<br /><br /> Still under development.</p>
+                                    <a href="https://github.com/JScott3234/PkmnTeamMaker" target="_blank" class="btn btn-primary mt-auto">Check the GitHub!</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proj-card-wrapper">
+                            <div class="card projContainer editor-container h-100" data-tab="homelab.md">
+                                <img src="../images/ubuntu-linux.jpg" class="card-img-top" alt="Ubuntu Linux Home Lab">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Ubuntu Linux Home Lab</h5>
+                                    <p class="card-subtitle mb-2 orange">Personal Storage and Home Lab Server</p>
+                                    <p class="card-text">Repurposed Dell PowerEdge T320 used for Drive Storage and Web Hosting. Implements Linux Security Protocols for SSH for protected remote access and game hosting.</p>
+                                    <a href="https://linuxblog.io/home-lab-beginners-guide-hardware/" target="_blank" class="btn btn-primary mt-auto">Learn to Make Your Own!</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proj-card-wrapper">
+                            <div class="card projContainer editor-container h-100" data-tab="codesphere.md">
+                                <img src="../images/TeamCodeSphere.jpg" class="card-img-top" alt="CodeSphere">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">CodeSphere</h5>
+                                    <p class="card-subtitle mb-2 orange">React.js Collaborative IDE</p>
+                                    <p class="card-text">IDE for classes to streamline programming lessons.<br /> <br/>Contributed O-Auth Systems (Supabase, passport.js), System Design, and some Frontend.</p>
+                                    <a href="https://github.com/ricardoMulino/OSU-Codesphere" target="_blank" class="btn btn-primary mt-auto">Check the GitHub!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="container-fluid pt-3 mb-3">
                 <h2 class="text-center text-light pb-1"><strong>Game Development and Virtual Reality</strong></h2>
-                <div id="gameDevProjects" class="row justify-content-center align-items-stretch p-4"></div>
+                <div class="proj-carousel" id="gameDevCarousel">
+                    <div class="proj-carousel-track" id="gameDevProjects">
+                        <div class="proj-card-wrapper">
+                            <div class="card projContainer editor-container h-100" data-tab="panoptics.md">
+                                <img src="../images/argus.jpg" class="card-img-top" alt="Pan-Optics">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Pan-Optics</h5>
+                                    <p class="card-subtitle mb-2 orange">VR Optics Experiment</p>
+                                    <p class="card-text">Manipulates the user's Field of View to create optical illusions.<br/><br/>Unfinished HackKU Project - inspiring my research interests.</p>
+                                    <a href="https://devpost.com/software/pan-optics" target="_blank" class="btn btn-primary mt-auto">Check My DevPost!</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proj-card-wrapper">
+                            <div class="card projContainer editor-container h-100" data-tab="wandor.md">
+                                <img src="../images/wandor.png" class="card-img-top" alt="Wandor">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Wandor</h5>
+                                    <p class="card-subtitle mb-2 orange">2D Grid Puzzle Game</p>
+                                    <p class="card-text">A 2D Puzzle Game made in Unity where players move two characters in a Grid Based environment.<br/><br/>Lead Programmer - Developed the Game Mechanics, controls, and build settings.</p>
+                                    <a href="https://drthunderbuckle.itch.io/wandor" target="_blank" class="btn btn-primary mt-auto">Check Out the Game!</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proj-card-wrapper">
+                            <div class="card projContainer editor-container h-100" data-tab="ssr.md">
+                                <img src="../images/ssr.png" class="card-img-top" alt="Shadow Switch Runner">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">Shadow Switch Runner</h5>
+                                    <p class="card-subtitle mb-2 orange">2D Platformer Game</p>
+                                    <p class="card-text">OSUVGDC Officer Project from the 2025 Fall Game Jam. <br/><br/>Contributed by creating a tool for platform creation and animation.</p>
+                                    <a href="https://daarkswoord.itch.io/shadow-switch-runner" target="_blank" class="btn btn-primary mt-auto">Check Out the Game!</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proj-card-wrapper">
+                            <div class="card projContainer editor-container h-100" data-tab="demoscene.md">
+                                <img src="../images/sphere.png" class="card-img-top" alt="Rendered Sphere">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">DemoScene Animation</h5>
+                                    <p class="card-subtitle mb-2 orange">Lua program that bounces a sphere around the screen</p>
+                                    <p class="card-text">Uses a basic game engine to draw and calculate sphere position and bounce it around the screen.
+                                    </br> Built to look like an old demoscene animation as a means to learn about the culture.</p>
+                                    <a href="https://github.com/JScott3234/3D-Renderer" target="_blank" class="btn btn-primary mt-auto">Learn to Use Lua!</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proj-card-wrapper">
+                            <div class="card projContainer editor-container h-100" data-tab="renderer.md">
+                                <img src="../images/tetraRender.png" class="card-img-top" alt="3D Graphics Renderer">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">3D Graphics Renderer</h5>
+                                    <p class="card-subtitle mb-2 orange">Java Graphics Renderer</p>
+                                    <p class="card-text">Object-oriented shape rendering system.</p>
+                                    <a href="https://github.com/JScott3234/3D-Renderer" target="_blank" class="btn btn-primary mt-auto">Check My GitHub!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="row pt-3 text-center">
