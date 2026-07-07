@@ -341,7 +341,7 @@ button:hover,
     border: 1px solid var(--darkBlue) !important;
     box-shadow: 0 4px 20px rgba(79, 68, 239, 0.15) !important;
     /* Mimicking the club site's bkgd pattern*/
-    background-image: url("../images/arena.jpg");
+    background-image: url("../images/arena.webp");
     background-size: fit-content;
 }
 
