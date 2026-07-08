@@ -272,7 +272,7 @@ button:hover,
 
 .projContainer:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 25px #056d30;
+    box-shadow: 0 0px 15px var(--yellow);
     /*border: var(--purple);*/
 }
 
@@ -707,5 +707,16 @@ button:hover,
 
     .proj-carousel {
         padding: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 770px) {
+
+    .research{
+        justify-content: center;
+        align-items: center;
+    }
+    .img{
+        margin-bottom: 3rem;
     }
 }
