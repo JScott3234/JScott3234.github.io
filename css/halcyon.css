@@ -2,34 +2,61 @@
 
 
 :root {
-    /* Halcyon Color Palette - thank you Brittany Chiang */
-    --bg: #171c28;
-    --card: #1d2433;
-    --border: #2f3b54;
-    --mainText: #d7dce2;
-    --secondaryText: #a2aabc;
-    --cyan: #5ccfe6;
-    --purple: #c3a6ff;
-    --yellow: #ffd580;
-    --green: #bae67e;
-    --orange: #ffae57;
+    /* Cassette Futurism Palette - Neutral Base with Retro Accents */
+    --bg: #141517;
+    /* Dark hardware casing */
+    --card: #1c1e21;
+    /* Slightly lighter panel */
+    --border: #4a4d55;
+    /* Neutral chunky border */
+    --mainText: #e0e0e0;
+    /* Off-white for readability and neutral image pairing */
+    --secondaryText: #9ca3af;
+
+    /* Retro Terminal Accents */
+    --blue: #2679f6;
+    --rust: #d27d2d;
+    --amber: #ffb000;
+    --green: #4af626;
+    --bloodorange: #ff5500;
 
     /* Accents */
-    --red: #ef4444;
-    --lightRed: #fca5a5;
-    --lightBlue: #60a5fa;
-    --darkBlue: #3b82f6;
-    --lightOrange: #fdba74;
-    --darkOrange: #fb923c;
+    --red: #d32f2f;
+    --lightRed: #ef5350;
+    --lightBlue: #4af626;
+    --darkBlue: #2e7d32;
+    --lightOrange: #ff9800;
+    --darkOrange: #e65100;
+
+    --glow: 0 0 5px rgba(255, 176, 0, 0.4);
 }
 
 html,
 body {
     background-color: var(--bg);
-    color: var(--secondaryText);
+    color: var(--mainText);
     font-family: 'JetBrains Mono', monospace;
     font-size: 15px;
-    /*padding-bottom: 2.5rem;*/
+    text-shadow: var(--glow);
+    /* CRT subtle noise background */
+    background-image: repeating-linear-gradient(0deg,
+            transparent,
+            transparent 2px,
+            rgba(0, 0, 0, 0.2) 2px,
+            rgba(0, 0, 0, 0.2) 4px);
+}
+
+.crt-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+    background-size: 100% 4px, 6px 100%;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0.7;
 }
 
 h1,
@@ -38,31 +65,38 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 700;
+    font-family: 'VT323', monospace;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 h1 {
-    font-size: 4rem;
-    color: var(--yellow);
+    font-size: 5rem;
+    color: var(--amber);
     padding-top: 3rem;
     margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(255, 176, 0, 0.6);
 }
 
 @media (max-width: 768px) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 }
 
 h2 {
-    font-size: 1.8rem;
-    color: var(--purple);
+    font-size: 2.5rem;
+    color: var(--mainText);
     margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border);
+    display: inline-block;
+    padding-bottom: 0.5rem;
 }
 
 h3 {
-    font-size: 1.3rem;
-    color: var(--yellow);
+    font-size: 1.8rem;
+    color: var(--green);
 }
 
 p {
@@ -71,13 +105,13 @@ p {
 }
 
 a {
-    color: var(--orange);
+    color: var(--bloodorange);
     text-decoration: none;
     transition: color 0.2s;
 }
 
 a:hover {
-    color: var(--yellow);
+    color: var(--amber);
     text-decoration: underline;
 }
 
@@ -90,10 +124,11 @@ a:hover {
 .navbar-brand,
 .nav-link {
     color: var(--mainText) !important;
+    font-family: 'VT323'
 }
 
 .nav-link:hover {
-    color: var(--orange) !important;
+    color: var(--bloodorange) !important;
 }
 
 /* Mobile dropdown panel */
@@ -109,18 +144,19 @@ a:hover {
 /* Editor Container - made to look like a tab window */
 .editor-container {
     background-color: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 6px;
+    border: 3px solid var(--border);
+    border-radius: 0;
     position: relative;
     padding: 3.5rem 2rem 2rem 2rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5), 4px 4px 0 rgba(0, 0, 0, 0.5);
     margin-bottom: 2rem;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.editor-container:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+.hover-container:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5), 6px 6px 0 rgba(255, 176, 0, 0.4);
+    /* Amber hover shadow */
 }
 
 .editor-container::before {
@@ -130,15 +166,18 @@ a:hover {
     left: 0;
     right: 0;
     height: 35px;
-    background-color: var(--bg);
-    border-bottom: 1px solid var(--border);
-    border-radius: 5px 5px 0 0;
+    background-color: var(--border);
+    border-bottom: 3px solid var(--border);
+    border-radius: 0;
     display: flex;
     align-items: center;
     padding-left: 15px;
-    color: var(--secondaryText);
-    font-size: 0.85rem;
-    font-family: 'JetBrains Mono', monospace;
+    color: var(--bg);
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'VT323', monospace;
+    text-transform: uppercase;
+    text-shadow: none;
 }
 
 /* Index Page */
@@ -153,14 +192,15 @@ a:hover {
 }
 
 .contactInfo a {
-    color: var(--cyan);
+    color: var(--green);
 }
 
 .personalImage {
-    border-radius: 4px;
-    border: 1px solid var(--border);
+    border-radius: 0;
+    border: 2px solid var(--border);
     max-width: 100%;
     height: auto;
+    /* Removed the heavy sepia filter so images look natural */
 }
 
 /* Work Experience */
@@ -185,22 +225,29 @@ a:hover {
 button,
 .btn-dark,
 .btn-primary {
-    background-color: var(--border);
+    background-color: var(--card);
     color: var(--mainText);
-    font-family: 'JetBrains Mono', monospace;
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 0.75rem 1.5rem;
-    /*transition: all 0.2s;*/
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border: 2px solid var(--border);
+    border-radius: 0;
+    padding: 0.5rem 1.5rem;
     cursor: pointer;
+    box-shadow: 3px 3px 0 var(--border);
+    transition: all 0.1s;
+    text-shadow: none;
 }
 
 button:hover,
 .btn-dark:hover,
 .btn-primary:hover {
-    background-color: var(--orange);
-    color: #1d2433;
-    border: var(--orange);
+    background-color: var(--amber);
+    /* Amber accent on hover */
+    color: var(--bg);
+    border-color: var(--amber);
+    box-shadow: 1px 1px 0 var(--amber);
+    transform: translate(2px, 2px);
 }
 
 /* Marquees (feels weird to call them tickers) */
@@ -232,13 +279,16 @@ button:hover,
 
 .tickerItem {
     display: inline-block;
-    margin: 0 0.15rem;
-    padding: 0.5rem 1.2rem;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 4px;
+    margin: 0 0.25rem;
+    padding: 0.25rem 1rem;
+    background: var(--bg);
+    border: 2px solid var(--green);
+    border-radius: 0;
     color: var(--green);
-    font-size: 0.9rem;
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 0 rgba(74, 246, 38, 0.3);
 }
 
 @keyframes ticker {
@@ -265,15 +315,14 @@ button:hover,
 .projContainer {
     background-color: var(--card);
     border: 1px solid var(--border);
-    border-radius: 6px;
     overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: box-shadow 0.2s ease;
 }
 
 .projContainer:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 0px 15px var(--yellow);
-    /*border: var(--purple);*/
+    /*transform: translateY(-4px);*/
+    box-shadow: 0 0px 15px var(--amber);
+    border: 1px solid var(--rust);
 }
 
 .projContainer .card-body {
@@ -282,7 +331,7 @@ button:hover,
 }
 
 .projContainer .card-title {
-    color: var(--cyan);
+    color: var(--green);
     font-weight: bold;
     margin-bottom: 1rem;
 }
@@ -292,13 +341,17 @@ button:hover,
     font-size: 0.9rem;
 }
 
-.orange {
-    color: var(--orange);
+.projContainer .card-subtitle {
+    color: var(--amber);
+}
+
+.bloodorange {
+    color: var(--bloodorange);
 }
 
 /* Footer */
 .footer {
-    background-color: var(--yellow);
+    background-color: var(--amber);
     color: #171c28;
     text-align: center;
     padding: 0.4rem;
@@ -332,13 +385,13 @@ button:hover,
 }
 
 .footer a:hover {
-    color: var(--purple);
+    color: var(--rust);
     text-decoration: none;
 }
 
 /* Leadership Custom Sections */
 .thunderContainer {
-    border: 1px solid var(--darkBlue) !important;
+    border: 1px solid var(--blue) !important;
     box-shadow: 0 4px 20px rgba(79, 68, 239, 0.15) !important;
     /* Mimicking the club site's bkgd pattern*/
     background-image: url("../images/arena.png");
@@ -346,12 +399,11 @@ button:hover,
 }
 
 .thunderContainer::before {
-    border-bottom: 1px solid var(--darkBlue) !important;
-    color: var(--darkBlue) !important;
+    border-bottom: 1px solid var(--blue) !important;
 }
 
 .thunderTitle a {
-    color: var(--darkBlue) !important;
+    color: var(--green) !important;
 }
 
 .thunderBody {
@@ -361,7 +413,7 @@ button:hover,
 }
 
 .thunderAccent {
-    color: var(--darkBlue) !important;
+    color: var(--bloodorange) !important;
     font-size: 0.9rem;
     margin-bottom: 1.5rem;
 }
@@ -376,7 +428,6 @@ button:hover,
 
 .vgdcContainer::before {
     border-bottom: 1px solid var(--red) !important;
-    color: var(--red) !important;
 }
 
 .vgdcTitle a {
@@ -390,13 +441,13 @@ button:hover,
 }
 
 .vgdcAccent {
-    color: var(--lightRed) !important;
+    color: var(--bloodorange) !important;
     font-size: 0.9rem;
     margin-bottom: 1.5rem;
 }
 
 .hackokContainer {
-    border: 1px solid var(--orange) !important;
+    border: 1px solid var(--bloodorange) !important;
     box-shadow: 0 4px 20px rgba(249, 115, 22, 0.15) !important;
     background-image: url("../images/pcb.jpg");
     background-size: cover;
@@ -404,8 +455,7 @@ button:hover,
 }
 
 .hackokContainer::before {
-    border-bottom: 1px solid var(--orange) !important;
-    color: var(--orange) !important;
+    border-bottom: 1px solid var(--bloodorange) !important;
 }
 
 .hackokTitle a {
@@ -425,29 +475,28 @@ button:hover,
 }
 
 .acmContainer {
-    border: 1px solid var(--darkBlue) !important;
+    border: 1px solid var(--blue) !important;
     box-shadow: 0 4px 20px rgba(59, 130, 246, 0.15) !important;
     background-image: url("../images/ide.png");
     background-size: cover;
 }
 
 .acmContainer::before {
-    border-bottom: 1px solid var(--darkBlue) !important;
-    color: var(--darkBlue) !important;
+    border-bottom: 1px solid var(--blue) !important;
 }
 
 .acmTitle a {
-    color: var(--lightBlue) !important;
+    color: var(--green) !important;
 }
 
 .acmBody {
     background-color: var(--card);
-    border: 3px solid var(--lightBlue);
+    border: 3px solid var(--blue);
     border-radius: 6px;
 }
 
 .acmAccent {
-    color: var(--lightBlue) !important;
+    color: var(--bloodorange) !important;
     font-size: 0.9rem;
     margin-bottom: 1.5rem;
 }
@@ -458,6 +507,9 @@ button:hover,
     position: relative;
     max-width: 1200px;
     margin: 100px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
 }
 
 @keyframes moveline {
@@ -483,7 +535,7 @@ button:hover,
 }
 
 .timelineContainer {
-    width: 45%;
+    width: 100%;
     position: relative;
     animation: drop 1s linear forwards;
     opacity: 0;
@@ -495,23 +547,23 @@ button:hover,
 }
 
 .timelineContainer:nth-child(2) {
-    animation-delay: 1s;
+    animation-delay: 0.5s;
 }
 
 .timelineContainer:nth-child(3) {
-    animation-delay: 2s;
+    animation-delay: 1.5s;
 }
 
 .timelineContainer:nth-child(4) {
-    animation-delay: 3s;
+    animation-delay: 1.7s;
 }
 
 .timelineContainer:nth-child(5) {
-    animation-delay: 4s;
+    animation-delay: 3s;
 }
 
 .timelineContainer:nth-child(6) {
-    animation-delay: 5s;
+    animation-delay: 3.2s;
 }
 
 .left {
@@ -519,7 +571,7 @@ button:hover,
 }
 
 .right {
-    left: 55%;
+    left: 0;
 }
 
 /* Drawing the Line */
@@ -540,7 +592,7 @@ button:hover,
 .timelineContainer {
     position: relative;
     background-color: inherit;
-    width: 50%;
+    width: 100%;
 }
 
 /* The circles on the timeline */
@@ -564,7 +616,8 @@ button:hover,
 
 .right {
     padding: 0px 0px 20px 40px;
-    left: 50%;
+    left: 0;
+    margin-top: 50px;
 }
 
 /* arrows to the left container (pointing right) */
@@ -600,6 +653,10 @@ button:hover,
 @media screen and (max-width: 600px) {
 
     /* Place the timelime to the left */
+    .timeline {
+        display: block;
+    }
+
     .timeline::after {
         left: 31px;
     }
@@ -632,6 +689,7 @@ button:hover,
     /* Make all right containers behave like the left ones */
     .right {
         left: 0%;
+        margin-top: 0;
     }
 }
 
@@ -659,6 +717,12 @@ button:hover,
     scrollbar-color: var(--border) var(--bg);
     /* Firefox */
     padding: 1rem 0 2rem 0;
+    cursor: grab;
+}
+
+.proj-carousel-track.active {
+    cursor: grabbing;
+    user-select: none;
 }
 
 .proj-carousel-track::-webkit-scrollbar {
@@ -712,11 +776,12 @@ button:hover,
 
 @media screen and (max-width: 770px) {
 
-    .research{
+    .research {
         justify-content: center;
         align-items: center;
     }
-    .img{
+
+    .img {
         margin-bottom: 3rem;
     }
 }
